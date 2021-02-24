@@ -1,0 +1,10 @@
+﻿body {
+}
+
+#imageGallery {
+    list-style: none;
+}
+
+#imageGallery li{
+    display:inline;
+}

@@ -1,0 +1,84 @@
+﻿
+@{
+    ViewData["Title"] = "functions";
+}
+
+<script>
+    function changeImage() {
+        element = document.getElementById('myimage')
+        if (element.src.match("bulbon")) {
+            element.src = "/images/JavascriptLearn/pic_bulboff.gif"
+        }
+        else {
+            element.src = "/images/JavascriptLearn/pic_bulbon.gif"
+        }
+    }
+
+    function checkboxed(objName) {
+        var objNameList = document.getElementsByName('checkbox1');
+
+        if (null != objNameList) {
+            alert("全选操作");
+            for (var i = 0; i < objNameList.length; i++) {
+                objNameList[i].checked = "checked";
+            }
+        }
+    }
+
+    function uncheckboxed(objName) {
+        var objNameList = document.getElementsByName('checkbox1');
+
+        if (null != objNameList) {
+            alert("取消全选操作");
+            for (var i = 0; i < objNameList.length; i++) {
+                objNameList[i].checked = "";
+            }
+        }
+    }
+
+    var checkAll = false;
+    function allcheck(element) {
+        checkAll = !checkAll;
+        element.value = checkAll ? "全不选" : "全选";
+        let inputs = document.getElementsByName('checkbox2')
+        for (var index in inputs) {
+            inputs[index].checked = checkAll;
+        }
+    }
+</script>
+
+<h1>functions</h1>
+
+<img id="myimage" onclick="changeImage()" src="/images/JavascriptLearn/pic_bulboff.gif" width="100" height="180" />
+<p>点击灯泡开关！</p>
+看书：
+<input type="checkbox" name="checkbox1" value=1>
+<br>
+写字：
+<input type="checkbox" name="checkbox1" value=2>
+<br>
+打飞机：
+<input type="checkbox" name="checkbox1" value=3>
+<br>
+玩游戏：
+<input type="checkbox" name="checkbox1" value=4>
+<br>
+<button onclick="checkboxed()">全选</button>
+<button onclick="uncheckboxed()">取消全选</button>
+
+<br>
+看书：
+<input type="checkbox" name="checkbox2" value=1>
+<br>
+写字：
+<input type="checkbox" name="checkbox2" value=2>
+<br>
+打飞机：
+<input type="checkbox" name="checkbox2" value=3>
+<br>
+玩游戏：
+<input type="checkbox" name="checkbox2" value=4>
+<br>
+<input type="button" value="全选" onclick="allcheck(this)">
+<br>
+<button onclick="this.innerHTML=Date()">现在的时间是?</button>

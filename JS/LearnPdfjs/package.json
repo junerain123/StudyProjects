@@ -1,0 +1,14 @@
+﻿{
+  "name": "learn-pdfjs",
+  "version": "0.0.0",
+  "description": "LearnPdfjs",
+  "main": "server.js",
+  "author": {
+    "name": ""
+  },
+  "dependencies": {
+    "pdfjs-dist": "^2.5.207",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
+  }
+}

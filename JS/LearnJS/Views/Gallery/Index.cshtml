@@ -1,0 +1,37 @@
+﻿<h1>Snapshots</h1>
+
+<h2>直接为每一个元素添加onclick</h2>
+<ul>
+    <li>
+        <a href="~/images/gallery/1.png" class="popup">从class判断为该元素添加onClick事件</a>
+    </li>
+    <li>
+        <a href="~/images/gallery/1.png" title="动漫" onclick="showPicture(this);return false">我的动漫</a>
+    </li>
+    <li>
+        <a href="~/images/gallery/2.jpg" title="图书" onclick="showPicture(this);return false">大型商业银行</a>
+    </li>
+    <li>
+        <a href="~/images/gallery/3.jpg" title="银行" onclick="showPicture(this);return false">常熟农商行</a>
+    </li>
+</ul>
+
+
+<h2>查找id为其内部li添加onclick</h2>
+<ul id="imageGallery">
+    <li>
+        <a href="~/images/gallery/1.png" title="动漫">我的动漫</a>
+    </li>
+    <li>
+        <a href="~/images/gallery/2.jpg" title="图书">大型商业银行</a>
+    </li>
+    <li>
+        <a href="~/images/gallery/3.jpg" title="银行">常熟农商行</a>
+    </li>
+</ul>
+
+<img id="placeHolder" src="~/images/gallery/placeHolder.jpg" alt="my image gallery" style="width:800px;height:400px" />
+
+<p id="description">选择一张图片...</p>
+
+<a href="http://www.example.com" onclick="popUp(this.href); return false;">Example</a>

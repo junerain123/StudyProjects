@@ -1,0 +1,25 @@
+﻿
+@{
+    ViewData["Title"] = "DictoryInJS";
+}
+
+<h1>DictoryInJS</h1>
+
+<p>
+    有两种方式可以访问对象属性:
+</p>
+<p>
+    你可以使用 .property 或 ["property"]。
+</p>
+<p id="demo"></p>
+<script>
+    var person = {
+        firstName: "John",
+        lastName: "Doe",
+        id: 5566
+    };
+    document.getElementById("demo").innerHTML =
+        person["firstName"] + " " + person["lastName"];
+    //等价于document.getElementById("demo").innerHTML =
+        //person.firstName + " " + person.lastName;
+</script>

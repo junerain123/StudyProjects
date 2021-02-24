@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>React 4</title>
+    <script src="node_modules/react/umd/react.development.js"></script>
+    <script src="node_modules/react-dom/umd/react-dom.development.js"></script>
+    <script src="node_modules/babel-standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id="app"></div>
+    <!--<script type="text/babel"></script>-->
+    <script>
+        class Hello extends React.Component {
+
+            constructor(props) {
+                console.log('构造函数初始化');
+                super(props);
+                this.state = {
+                    name: 'Tom',
+                    age: 31,
+                };
+            }
+
+            componentWillMount() {
+                console.log('组件加载前');
+            }
+
+            updateUser = () => {
+                this.setState({
+                    name: 'Tim',
+                    age: '32',
+                })
+            }
+
+            render() {
+                console.log('正在加载或数据更新');
+                return <div>
+                    <h1>Hello, {this.state.name}</h1>
+                    <p>年龄: {this.state.age}</p>
+                    <button onClick={this.updateUser}>更新数据</button>
+                </div>
+            }
+
+            componentDidMount() {
+                console.log('组件加载后');
+            }
+        }
+
+        ReactDOM.render(
+            <Hello />,
+            document.getElementById('app')
+        );
+    </script>
+</body>
+</html>

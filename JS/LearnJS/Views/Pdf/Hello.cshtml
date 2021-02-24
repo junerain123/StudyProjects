@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <script src="~/pdfjs-dist/build/pdf.js"></script>
+    <script src="~/pdfjs-dist/web/viewer.js"></script>
+</head>
+<body>
+    <canvas id="my_canvas"></canvas>
+
+    <script>
+        pdfjsLib.getDocument("~/study.pdf").then(doc => {
+            console.log("This file has" + doc._pdfInfo.numPages + " pages");
+
+            doc.getPage(1).then(page => {
+                var myCanvas = document.getElementById("my_canvas");
+                var context = myCanvas.getContext("2d");
+
+                var viewport = page.getViewport(1);
+                myCanvas.width = viewport.width;
+                myCanvas.height = viewport.height;
+
+                page.render({
+                    canvasContext: context,
+                    viewport: viewport,
+                });
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+﻿
+@{
+    ViewData["Title"] = "AnonymousFunction";
+}
+
+<h1>AnonymousFunction</h1>
+
+<script>
+    var a = 100;
+    var a = function () {
+        return "function"
+    }
+    console.log(a);
+    /*
+    输出
+    function() {
+        return "function";
+    }
+    */
+    console.log(a());   //输出 "function"
+</script>

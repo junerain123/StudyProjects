@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30717.126
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "LearnPdfjs", "LearnPdfjs.njsproj", "{12FE6D9C-8559-4ECD-ACA3-F94FF66B8AC3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{12FE6D9C-8559-4ECD-ACA3-F94FF66B8AC3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12FE6D9C-8559-4ECD-ACA3-F94FF66B8AC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12FE6D9C-8559-4ECD-ACA3-F94FF66B8AC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12FE6D9C-8559-4ECD-ACA3-F94FF66B8AC3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0F44473F-C5EA-49CA-99B8-8D4D4C1C5DA2}
+	EndGlobalSection
+EndGlobal
