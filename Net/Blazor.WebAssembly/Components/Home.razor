@@ -1,0 +1,41 @@
+﻿@*1 父组件传参Title*@
+@*
+
+    <div>
+        <h1>
+            @Title
+        </h1>
+        <p>
+            <img src="/asssets/img1.png" alt="img1" class="img-fluid" />
+        </p>
+    </div>
+
+    @code {
+        [Parameter]
+        public string Title { get; set; }
+
+    }*@
+
+
+
+@*2 父组件传参Title，多参用AdditionalAttributes*@
+@*<div style="color:@Color">
+        <h1>
+            @Title
+        </h1>
+        <p>
+            <img class="img-fluid" @attributes="AdditionalAttributes" />
+        </p>
+    </div>*@
+
+
+@*3 父组件传了html或其他字符串，交给class中的ChildContent*@
+<div style="color:@Color">
+    <h1>
+        @Title
+    </h1>
+    <p>
+        @ChildContent
+        @HeadContent
+    </p>
+</div>

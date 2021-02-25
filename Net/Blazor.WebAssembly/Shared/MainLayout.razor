@@ -10,6 +10,14 @@
     </div>
 
     <div class="content px-4">
-        @Body
+        @*将color传递给子孙组件*@
+        <CascadingValue Value="@_color">
+            @Body
+        </CascadingValue>
     </div>
 </div>
+
+@code
+{
+    private readonly string _color = "#0505b5";
+}

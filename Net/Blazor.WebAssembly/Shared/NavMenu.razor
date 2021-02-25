@@ -8,6 +8,7 @@
 <div class="@NavMenuCssClass" @onclick="ToggleNavMenu">
     <ul class="nav flex-column">
         <li class="nav-item px-3">
+            @*Match="NavLinkMatch.All 完全匹配，该nav-link才会高亮，如果是NavLinkMatch.Prefix，只要前缀匹配就会高亮*@
             <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
                 <span class="oi oi-home" aria-hidden="true"></span> Home
             </NavLink>

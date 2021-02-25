@@ -1,7 +1,28 @@
 ﻿@page "/"
+@page "/index"
+@using Blazor.WebAssembly.Components
 
-<h1>Hello, world!</h1>
+@*将src，alt直接传参至Home组件*@
+@*<Home Title="主页" src="/asssets/img1.png" alt="img1"></Home>*@
 
-Welcome to your new app.
+@*将src，alt打包成AdditionalAttributes传参至Home组件*@
+<Home Title="主页" @attributes="AdditionalAttributes">
 
-<SurveyPrompt Title="How is Blazor working for you?" />
+    @*1 不指定是哪个Content*@
+    @*点击访问
+        <a href="https://github.com/junerain123" target="_blank">我的github</a>*@
+
+    @*2 指定是HeadContent*@
+    <HeadContent>
+        点击访问
+        <a href="https://github.com/junerain123" target="_blank">HeadContent的github</a>
+    </HeadContent>
+</Home>
+
+@code{
+    public Dictionary<string, object> AdditionalAttributes { get; set; } = new Dictionary<string, object>
+    {
+        {"src", "/asssets/img1.png" },
+        {"alt", "img1"  },
+    };
+}

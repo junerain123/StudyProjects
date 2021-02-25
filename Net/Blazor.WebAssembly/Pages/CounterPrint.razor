@@ -1,0 +1,38 @@
+﻿<h3>CounterPrint</h3>
+
+<p>
+    子组件Current count: @CurrentCount
+</p>
+
+@code {
+    [Parameter]
+    public string Title { get; set; }
+
+    [Parameter]
+    public int CurrentCount { get; set; }
+
+    protected override void OnInitialized()
+    {
+        Console.WriteLine($"OnInitialized => Title: {Title}, CurrrentCount: {CurrentCount}");
+    }
+
+    protected override void OnParametersSet()
+    {
+        Console.WriteLine($"OnParametersSet => Title: {Title}, CurrrentCount: {CurrentCount}");
+    }
+
+    protected override void OnAfterRender(bool firstRender)
+    {
+        base.OnAfterRender(firstRender);
+        if(firstRender)
+        {
+            Console.WriteLine("这是第一次渲染【完】这个组件！");
+        }
+    }
+
+    protected override bool ShouldRender()
+    {
+        return true;
+    }
+
+}
