@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31105.61
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloWasm", "HelloWasm.csproj", "{30CF1093-6B57-4789-B4A4-123C0BE2ECDE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{30CF1093-6B57-4789-B4A4-123C0BE2ECDE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30CF1093-6B57-4789-B4A4-123C0BE2ECDE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30CF1093-6B57-4789-B4A4-123C0BE2ECDE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30CF1093-6B57-4789-B4A4-123C0BE2ECDE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {559F8F77-B2EB-4291-8986-6B04EEA20E2D}
+	EndGlobalSection
+EndGlobal
